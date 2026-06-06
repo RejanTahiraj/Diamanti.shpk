@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard - Diamanti.shpk</title>
+    <link rel="stylesheet" href="weather-style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>💎 Diamanti.shpk - Weather Dashboard</h1>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">Shtëpia</a></li>
+                    <li><a href="weather.html">Moti</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Search Section -->
+            <section class="search-section">
+                <div class="search-box">
+                    <input 
+                        type="text" 
+                        id="cityInput" 
+                        placeholder="Shkruaj emrin e qytetit..."
+                        class="search-input"
+                    >
+                    <button id="searchBtn" class="search-btn">Kërko</button>
+                    <button id="locationBtn" class="location-btn">📍 Lokacioni Im</button>
+                </div>
+                <div id="error" class="error-message"></div>
+            </section>
+
+            <!-- Weather Display -->
+            <section class="weather-section" id="weatherSection" style="display: none;">
+                <!-- Current Weather -->
+                <div class="current-weather">
+                    <div class="weather-header">
+                        <h2 id="cityName"></h2>
+                        <p id="currentDate"></p>
+                    </div>
+                    
+                    <div class="weather-main">
+                        <div class="weather-icon">
+                            <img id="weatherIcon" src="" alt="Moti">
+                        </div>
+                        <div class="weather-temp">
+                            <span id="temperature" class="temp-value"></span>
+                            <span class="temp-unit">°C</span>
+                        </div>
+                    </div>
+
+                    <div class="weather-description">
+                        <p id="weatherDesc"></p>
+                    </div>
+
+                    <div class="weather-details">
+                        <div class="detail-card">
+                            <span class="detail-label">💨 Shpejtësia e Erës</span>
+                            <span class="detail-value" id="windSpeed"></span>
+                        </div>
+                        <div class="detail-card">
+                            <span class="detail-label">💧 Lagështia</span>
+                            <span class="detail-value" id="humidity"></span>
+                        </div>
+                        <div class="detail-card">
+                            <span class="detail-label">🌡️ Ndjesja</span>
+                            <span class="detail-value" id="feelsLike"></span>
+                        </div>
+                        <div class="detail-card">
+                            <span class="detail-label">🔽 Presioni</span>
+                            <span class="detail-value" id="pressure"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5-Day Forecast -->
+                <div class="forecast-section">
+                    <h3>Parashikimi për 5 Ditë</h3>
+                    <div class="forecast-grid" id="forecastGrid">
+                        <!-- Forecast cards will be inserted here -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Loading -->
+            <div id="loading" class="loading" style="display: none;">
+                <p>Duke ngarkuar të dhënat...</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Diamanti.shpk - Weather Dashboard</p>
+            <p>Të dhënat e motit nga OpenWeatherMap API</p>
+        </div>
+    </footer>
+
+    <script src="weather-script.js"></script>
+</body>
+</html>
