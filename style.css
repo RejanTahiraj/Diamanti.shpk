@@ -115,6 +115,21 @@ body {
     text-decoration: none;
 }
 
+/* Hero Button - Special Styling */
+.hero .btn-primary {
+    background-color: #FFFFFF;
+    color: var(--color-primary);
+}
+
+.hero .btn-primary:hover {
+    background-color: #f0f0f0;
+    box-shadow: 0 5px 15px rgba(0, 102, 204, 0.3);
+}
+
+.hero .btn a {
+    color: var(--color-primary);
+}
+
 /* Shërbimet Section */
 .sherbimet {
     padding: 4rem 2rem;
