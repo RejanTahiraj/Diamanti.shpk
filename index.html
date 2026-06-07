@@ -41,18 +41,22 @@
                 <div class="service-card">
                     <h3>🔧 Instalim Gypash</h3>
                     <p>Instalim profesional i gypave ujit HDPE me garantim cilësie</p>
+                    <button class="service-btn" onclick="selectService('Instalim Gypash')">Instalim Gypash</button>
                 </div>
                 <div class="service-card">
                     <h3>🔍 Inspektim</h3>
                     <p>Inspektim dhe diagnostikim i sistemeve të ujësjellësit</p>
+                    <button class="service-btn" onclick="selectService('Inspektim')">Inspektim</button>
                 </div>
                 <div class="service-card">
                     <h3>🛠️ Riparim</h3>
                     <p>Riparim i shpejtë dhe efikas i gypave të dëmtuar</p>
+                    <button class="service-btn" onclick="selectService('Riparim')">Riparim</button>
                 </div>
                 <div class="service-card">
                     <h3>📋 Konsultim</h3>
                     <p>Këshilla profesionale për zgjedhjen e materialeve të duhura</p>
+                    <button class="service-btn" onclick="selectService('Konsultim')">Konsultim</button>
                 </div>
             </div>
         </div>
@@ -109,12 +113,13 @@
                     </div>
                 </div>
 
-                <form class="contact-form">
+                <form class="contact-form" id="contactForm" onsubmit="handleSubmit(event)">
                     <h3>Dërgo Mesazh</h3>
-                    <input type="text" placeholder="Emri Juaj" required>
-                    <input type="email" placeholder="Email Juaj" required>
-                    <input type="tel" placeholder="Numri Juaj i Telefonit">
-                    <textarea placeholder="Mesazhi Juaj" rows="5" required></textarea>
+                    <input type="text" id="emri" placeholder="Emri Juaj" required>
+                    <input type="email" id="email" placeholder="Email Juaj" required>
+                    <input type="tel" id="telefon" placeholder="Numri Juaj i Telefonit">
+                    <input type="text" id="sherbimi" placeholder="Shërbimi" readonly class="readonly-input">
+                    <textarea id="mesazhi" placeholder="Mesazhi Juaj" rows="5" required></textarea>
                     <button type="submit" class="btn btn-primary">Dërgo</button>
                 </form>
             </div>
@@ -128,5 +133,7 @@
             <p>Gypat ujit HDPE | Ndërtime Profesionale | Shërbim i Përgjithshëm</p>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
