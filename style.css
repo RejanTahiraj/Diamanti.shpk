@@ -143,6 +143,9 @@ body {
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 .service-card:hover {
@@ -158,6 +161,29 @@ body {
 
 .service-card p {
     color: #666;
+    flex-grow: 1;
+}
+
+/* Service Button */
+.service-btn {
+    padding: 0.6rem 1.2rem;
+    background: linear-gradient(135deg, var(--color-primary) 0%, #0099FF 100%);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    align-self: flex-start;
+}
+
+.service-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 102, 204, 0.3);
+}
+
+.service-btn:active {
+    transform: translateY(0);
 }
 
 /* Produktet Section */
@@ -288,10 +314,11 @@ body {
     width: 100%;
     padding: 0.75rem;
     margin-bottom: 1rem;
-    border: 1px solid var(--color-border);
+    border: 2px solid var(--color-border);
     border-radius: 5px;
     font-family: inherit;
     font-size: 1rem;
+    transition: border-color 0.3s;
 }
 
 .contact-form input:focus,
@@ -299,6 +326,14 @@ body {
     outline: none;
     border-color: var(--color-primary);
     box-shadow: 0 0 5px rgba(0, 102, 204, 0.3);
+}
+
+/* Read-only Input */
+.readonly-input {
+    background-color: white !important;
+    color: var(--color-primary);
+    font-weight: 600;
+    border-color: var(--color-primary) !important;
 }
 
 .contact-form button {
